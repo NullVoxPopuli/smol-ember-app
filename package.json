@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "decorator-transforms": "^2.3.0",
+    "ember-primitives": "^0.36.0",
     "ember-strict-application-resolver": "^0.1.0"
   },
   "devDependencies": {

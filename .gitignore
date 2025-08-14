@@ -1,4 +1,5 @@
 # compiled output
+.log/
 dist/
 dist-tests/
 declarations/
