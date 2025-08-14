@@ -1,0 +1,58 @@
+{
+  "name": "smol-ember-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "format": "prettier . --cache --write",
+    "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\" --prefixColors auto",
+    "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\" --prefixColors auto && pnpm run format",
+    "lint:format": "prettier . --cache --check",
+    "lint:hbs": "ember-template-lint . --no-error-on-unmatched-pattern",
+    "lint:js": "eslint . --cache",
+    "lint:hbs:fix": "ember-template-lint . --fix --no-error-on-unmatched-pattern",
+    "lint:js:fix": "eslint . --fix",
+    "lint:types": "glint",
+    "start": "vite dev"
+  },
+  "dependencies": {
+    "decorator-transforms": "^2.3.0",
+    "ember-strict-application-resolver": "^0.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/plugin-transform-typescript": "^7.25.2",
+    "@babel/runtime": "^7.25.6",
+    "@ember/app-tsconfig": "^1.0.0",
+    "@embroider/core": "^4.1.0",
+    "@embroider/macros": "^1.18.0",
+    "@embroider/vite": "^1.1.5",
+    "@glimmer/component": "^2.0.0",
+    "@glint/core": "alpha",
+    "@glint/environment-ember-loose": "alpha",
+    "@glint/environment-ember-template-imports": "alpha",
+    "@glint/template": "^1.6.0-alpha.1",
+    "@glint/tsserver-plugin": "alpha",
+    "@rollup/plugin-babel": "^6.0.4",
+    "babel-plugin-ember-template-compilation": "^2.2.5",
+    "concurrently": "^9.0.1",
+    "ember-eslint": "0.5.0",
+    "ember-source": "^6.3.0",
+    "ember-template-lint": "^7.9.0",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-ember-template-tag": "^2.0.4",
+    "typescript": "~5.8.3",
+    "vite": "^6.2.4"
+  },
+  "ember": {
+    "edition": "octane"
+  },
+  "ember-addon": {
+    "version": 2,
+    "type": "app"
+  },
+  "engines": {
+    "node": ">= 22"
+  }
+}
